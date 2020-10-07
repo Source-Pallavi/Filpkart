@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30225.117
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Filpcart", "Filpcart\Filpcart.csproj", "{18B654BC-E185-4C9E-B974-A348843CD346}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{18B654BC-E185-4C9E-B974-A348843CD346}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{18B654BC-E185-4C9E-B974-A348843CD346}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{18B654BC-E185-4C9E-B974-A348843CD346}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{18B654BC-E185-4C9E-B974-A348843CD346}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B47B7FFC-C0AC-473B-B383-EDFC590B0DA7}
+	EndGlobalSection
+EndGlobal
