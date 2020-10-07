@@ -1,4 +1,5 @@
 ﻿using OpenQA.Selenium;
+using OpenQA.Selenium.Interactions;
 using SeleniumExtras.PageObjects;
 using System;
 using System.Collections.Generic;
@@ -35,6 +36,17 @@ namespace Filpcart
         public IWebElement searchButton;
         [FindsBy(How = How.XPath, Using = "//body/div[@id='container']/div[1]/div[3]/div[2]/div[1]/div[2]/div[2]/div[1]/div[1]/div[1]")]
         public IWebElement selectProduct;
+        [FindsBy(How = How.XPath, Using = "/html[1]/body[1]/div[1]/div[1]/div[3]/div[1]/div[1]/div[2]/div[1]/ul[1]/li[1]/button[1]")]
+        public IWebElement goToCart;
+
+        [FindsBy(How = How.XPath, Using = "//body/div[@id='container']/div[1]/div[1]/div[1]/div[2]/div[1]/div[1]/a[1]/img[1]")]
+        public IWebElement home;
+
+        [FindsBy(How = How.XPath, Using = "//body/div[@id='container']/div[1]/div[1]/div[1]/div[2]/div[3]/div[1]/div[1]/div[1]/div[1]")]
+        public IWebElement profile;
+
+        [FindsBy(How = How.XPath, Using = "//body//div[@id='container']//div//div//div//div//div//li[10]//a[1]")]
+        public IWebElement logout;
         public void FlipkartLogin()
         {
             phoneNum.SendKeys("7869605345");
@@ -56,7 +68,21 @@ namespace Filpcart
             Thread.Sleep(2000);
             driver.SwitchTo().Window(driver.WindowHandles[1]);
         }
-
+        public void Placeorder()
+        {
+            goToCart.Click();
+            Thread.Sleep(2000);
+          
+        }
+        public void FlipkartLogout()
+        {
+            home.Click();
+            Thread.Sleep(2000);
+            Actions action = new Actions(driver);
+            action.MoveToElement(profile).Build().Perform();
+            Thread.Sleep(5000);
+            logout.Click();
+        }
     }
 }
 

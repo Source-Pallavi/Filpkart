@@ -24,5 +24,11 @@ namespace Filpcart
             Class1 objectFC = new Class1(driver);
             objectFC.SearchProduct();
         }
+        [Test, Order(2)]
+        public void Cart()
+        {
+            Class1 objectFC = new Class1(driver);
+            objectFC.Placeorder();
+        }
     }
 }
