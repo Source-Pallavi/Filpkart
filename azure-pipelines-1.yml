@@ -5,7 +5,6 @@
 
 trigger:
 - master
-
 pool:
   vmImage: 'windows-latest'
 
@@ -32,8 +31,11 @@ steps:
   inputs:
     testSelector: 'testAssemblies'
     testAssemblyVer2: |
-      **\*Flipkart*.dll
+      **\*Flipcart*.dll
       !**\*TestAdapter.dll
       !**\obj\**
     searchFolder: '$(System.DefaultWorkingDirectory)'
-    runTestsInIsolation: false
+    runTestsInIsolation: true
+    codeCoverageEnabled: true
+    platform: '$(buildPlatform)'
+    configuration: '$(buildConfiguration)'
